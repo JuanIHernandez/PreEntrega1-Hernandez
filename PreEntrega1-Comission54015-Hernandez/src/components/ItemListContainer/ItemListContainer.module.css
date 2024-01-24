@@ -1,0 +1,11 @@
+.center {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+
+.message {
+  margin: auto;
+  width: 60%;
+  padding: 10px;
+}
