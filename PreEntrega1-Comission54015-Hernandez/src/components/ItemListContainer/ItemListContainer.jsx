@@ -1,7 +1,30 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import style from "../../components/ItemListContainer/ItemListContainer.module.css";
 import Product from "../Product/Product";
+import { requestData } from "../../MockData/asyncMock";
+
 const ItemListContainer = (props) => {
+  //const promise = (resolve, reject) => {};
+  // const promiseTask = new promise((resolve, reject) => {
+  //   //resolve("todo bien");
+  //   setTimeout(() => {
+  //     resolve("todo bien");
+  //   }, 1000);
+  //   //reject("todo mal");
+  // });
+  const [products, setProducts] = useState([]);
+  console.log(products);
+  useEffect(() => {
+    requestData()
+      .then((res) => {
+        setProducts(res);
+      })
+      .catch((err) => console.log(err))
+      .finnally(() => {
+        console.log("termino");
+      });
+  }, []);
+
   return (
     <div className={style.center}>
       <div>
