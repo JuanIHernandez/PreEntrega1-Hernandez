@@ -3,7 +3,6 @@ import NavBar from "./components/navbar/NavBar";
 import "./App.css";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 import Product from "./components/Product/Product";
-import "./app.css";
 
 function App() {
   const [count, setCount] = useState(0);
