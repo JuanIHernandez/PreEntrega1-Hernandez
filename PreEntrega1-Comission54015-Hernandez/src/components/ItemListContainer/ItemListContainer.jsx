@@ -14,7 +14,7 @@ const ItemListContainer = (props) => {
   // });
   const [products, setProducts] = useState([]);
   console.log(products);
-  useEffect(() => {
+  /*useEffect(() => {
     requestData()
       .then((res) => {
         setProducts(res);
@@ -24,6 +24,7 @@ const ItemListContainer = (props) => {
         console.log("termino");
       });
   }, []);
+  */
 
   return (
     <div className={style.center}>
